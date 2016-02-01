@@ -1,0 +1,91 @@
+<head>
+
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+	<!-- CSS and Ion Slider scripts-->
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/ion.rangeSlider.css" />
+	<script src="css/style.css" type="text/css"></script>
+		<!-- SLIDER Skins -->
+	<!-- <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css"/> -->
+	<link rel="stylesheet" href="css/ion.rangeSlider.skinHTML5.css" />
+	<!-- <link rel="stylesheet" href="css/ion.rangeSlider.skinModern.css" />
+	<link rel="stylesheet" href="css/ion.rangeSlider.skinNice.css" />
+	<link rel="stylesheet" href="css/ion.rangeSlider.skinSimple.css" /> -->
+
+	<!-- All JS -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/ion.rangeSlider.js"></script>
+
+	<script>
+	$(function() {
+		//ENGAGEMENT SLIDER
+		$("#engagement_slider").ionRangeSlider({
+            //hide_min_max: true,
+            //keyboard: true,
+            min: 0,
+            max: 10,
+            from: 0,
+            type: 'single',
+            step: 1,
+            //prefix: "",
+            //postfix: "",
+            values: [
+				        "Not engaged", "1", "2",
+				        "3", "4", "Moderately Engaging",
+				        "6", "7", "8",
+				        "9", "Very Engaging"
+				    ],
+			grid: true,
+            prettify_enabled: true
+        });
+
+		//DIFFICULTY SLIDER
+
+		//INFORMATIVE SLIDER
+
+		//DISTRACTION SLIDER
+	});
+	</script>
+	</head>
+
+	<body>
+	<link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+
+
+	<div id="container-questionnaire">
+	<h3>You are finished!  </h3>
+	<p class='lead'>Please answers these questions so we can improve this study.</p>
+
+	<div class="alert alert-warning hidden" id="noqs" role="alert">Please answer all of the questions</div>
+
+	<form id="postquiz" action="debrief" method="post">
+
+
+	<!-- beginning of a question -->
+	<div class="row question">
+	    <div class="col-md-6">
+	        Rate how <b>ENGAGING</b> you found this test:
+	        <!-- <div id="slider"></div> -->
+	    </div>
+
+	    <div class="col-md-4">
+	        <div>
+	       		<input type="text" id="engagement_slider" name="engagement" value="" />
+	       	</div>
+				
+	    </div>
+	</div>
+	<!-- end of a question -->
+
+
+	</form>
+	<button type="button" id="next" value="next" class="btn btn-primary btn-lg continue">
+	        Finish <span class="glyphicon glyphicon-arrow-right"></span>
+	    </button>
+	</div>
+	</div>
+	</div>
+	</div>
